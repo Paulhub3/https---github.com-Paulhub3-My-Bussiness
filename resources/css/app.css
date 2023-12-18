@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.resizable {
+    overflow: hidden;
+  }
+
+  .resizable-divider {
+    width: 10px;
+    cursor: ew-resize;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    background-color: #131314;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #212121;
+  }
