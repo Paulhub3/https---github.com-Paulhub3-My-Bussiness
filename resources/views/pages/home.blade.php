@@ -206,19 +206,58 @@
 
 
                         <!-- New Sale Button -->
-                        <button class="flex items-center justify-center p-4 space-y-4 border-2 border-[#535353] h-28 w-60 hover:bg-slate-600 ease-in duration-300">
-                            <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 fill-white">
-                                    <path fill-rule="evenodd" d="M4.5 12a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm6 0a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm6 0a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" clip-rule="evenodd" />
-                                </svg>
-                            </span>
-                        </button>
+                        <div x-data="{ open: false }" x-init="$refs.loading.classList.add('hidden');">
+                        <!-- Sidebar button -->
+                            <button @click="open = !open" class="flex items-center justify-center p-4 space-y-4 border-2 border-[#535353] h-28 w-60 hover:bg-slate-600 ease-in duration-300">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 fill-white">
+                                        <path fill-rule="evenodd" d="M4.5 12a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm6 0a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm6 0a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                            </button>
+
+                            <!-- Loading screen -->
+                            <div
+                            x-ref="loading"
+                            class="fixed inset-0 z-50 flex items-center justify-center text-2xl font-semibold text-white bg-black"
+                            >
+                            Loading.....
+                            </div>
+
+                            <!-- Sidebar Overlay -->
+                            <div x-show="open" @click="open = false" class="fixed inset-0 bg-black opacity-50"></div>
+
+                            <!-- Sidebar -->
+                            <div
+                            x-show="open"
+                            x-transition:enter="transform transition-transform duration-300"
+                            x-transition:enter-start="translate-x-full"
+                            x-transition:enter-end="translate-x-0"
+                            x-transition:leave="transform transition-transform duration-300"
+                            x-transition:leave-start="translate-x-0"
+                            x-transition:leave-end="translate-x-full"
+                            class="fixed top-0 right-0 w-64 h-full overflow-y-auto bg-white shadow-lg">
+                                <!-- Close Button -->
+                                <button @click="open = false" class="absolute top-0 right-0 p-2 m-4 text-gray-600 hover:text-gray-800">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </button>
+
+                                <!-- Sidebar Content -->
+                                <div class="p-4">
+                                    <h2 class="mb-4 text-xl font-semibold">Sidebar Content</h2>
+                                    <p>Your sidebar content goes here.</p>
+                                </div>
+                            </div>
+                        </div>
 
                         <!-- Payments Button -->
                         <button class="flex flex-col items-center justify-center p-4 space-y-4 border-2 border-[#535353] h-28 hover:bg-green-600 ease-in duration-300 w-96 bg-green-800">
                             <h1 class="font-sans text-2xl font-semibold text-white">F10</h1>
                             <h1 class="font-sans text-sm font-medium text-white">Payments</h1>
-
                         </button>
                     </div>
                 </div>

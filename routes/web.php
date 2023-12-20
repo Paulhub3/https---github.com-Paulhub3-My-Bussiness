@@ -31,3 +31,9 @@ Route::get('/home', function () {
     return view('pages.home');
 })->name('home')->middleware('guest');
 /* -- Home Page End -- */
+
+/* -- Dashboard Page-- */
+Route::get('/dashboard', function () {
+    return view('pages.dashboard');
+})->name('dashboard')->middleware('guest');
+/* -- Dashboard Page End -- */
