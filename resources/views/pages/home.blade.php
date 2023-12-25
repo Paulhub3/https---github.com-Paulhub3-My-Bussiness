@@ -236,21 +236,16 @@
                             x-transition:leave="transform transition-transform duration-300"
                             x-transition:leave-start="translate-x-0"
                             x-transition:leave-end="translate-x-full"
-                            class="fixed top-0 right-0 w-64 h-full overflow-y-auto bg-white shadow-lg">
+                            class="fixed top-0 right-0 h-full overflow-y-auto bg-[#212121] shadow-lg w-80">
                                 <!-- Close Button -->
-                                <button @click="open = false" class="absolute top-0 right-0 p-2 m-4 text-gray-600 hover:text-gray-800">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M6 18L18 6M6 6l12 12"></path>
-                                    </svg>
+                                <button @click="open = false" class="absolute top-0 right-0 p-2 m-4 mt-8 text-white hover:text-gray-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                        <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z" clip-rule="evenodd" />
+                                      </svg>
                                 </button>
 
-                                <!-- Sidebar Content -->
-                                <div class="p-4">
-                                    <h2 class="mb-4 text-xl font-semibold">Sidebar Content</h2>
-                                    <p>Your sidebar content goes here.</p>
-                                </div>
+                                <!-- Sidebar Content Components -->
+                                <x-home.side-content/>
                             </div>
                         </div>
 
