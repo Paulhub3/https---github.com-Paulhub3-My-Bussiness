@@ -1,5 +1,5 @@
 <x-admin.layout>
-    <div class="flex flex-col w-full py-3 space-y-2">
+    <div class="flex flex-col w-full px-3 py-3 space-y-2">
 
         <!-- first two sections in dashboard page --->
         <div class="flex flex-col space-y-2 lg:space-x-2 lg:flex lg:flex-row">

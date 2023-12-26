@@ -8,7 +8,7 @@
                 <path d="M10.076 8.64l-2.201-2.2V4.874a.75.75 0 00-.364-.643l-3.75-2.25a.75.75 0 00-.916.113l-.75.75a.75.75 0 00-.113.916l2.25 3.75a.75.75 0 00.643.364h1.564l2.062 2.062 1.575-1.297z" />
                 <path fill-rule="evenodd" d="M12.556 17.329l4.183 4.182a3.375 3.375 0 004.773-4.773l-3.306-3.305a6.803 6.803 0 01-1.53.043c-.394-.034-.682-.006-.867.042a.589.589 0 00-.167.063l-3.086 3.748zm3.414-1.36a.75.75 0 011.06 0l1.875 1.876a.75.75 0 11-1.06 1.06L15.97 17.03a.75.75 0 010-1.06z" clip-rule="evenodd" />
             </svg>
-            <a href="/login" wire:navigate>Management</a>
+            <a href="/dashboard" wire:navigate>Management</a>
         </div>
     </div>
 
@@ -20,7 +20,7 @@
             <path d="M10.933 19.231l-7.668-4.13-1.37.739a.75.75 0 000 1.32l9.75 5.25c.221.12.489.12.71 0l9.75-5.25a.75.75 0 000-1.32l-1.37-.738-7.668 4.13a2.25 2.25 0 01-2.134-.001z" />
           </svg>
 
-        <a href="/login" wire:navigate>View sales history</a>
+        <a href="/dashboard" wire:navigate>View sales history</a>
     </div>
 
     <div class="flex py-3 pl-4 space-x-1">
@@ -34,7 +34,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 fill-white">
                 <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
             </svg>
-            <a href="/login" wire:navigate>User info</a>
+            <a href="/dashboard" wire:navigate>User info</a>
         </div>
 
         <div class="flex space-x-5 font-sans text-sm">
